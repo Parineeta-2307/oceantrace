@@ -1,0 +1,17 @@
+{
+  "sar_detection": "COMPLETED",
+  "oil_spill_confirmation": "CONFIRMED",
+  "ocean_valid_candidate": "SELECTED",
+  "backward_hindcast": "COMPLETED",
+  "origin_distribution": "AVAILABLE",
+  "gfw_ais": "COMPLETED",
+  "vessel_attribution": "EVIDENCE AVAILABLE",
+  "forward_forecast": "COMPLETED",
+  "forecast_horizons": [
+    "+6h",
+    "+12h",
+    "+24h",
+    "+48h"
+  ],
+  "synthetic_data_used": false
+}

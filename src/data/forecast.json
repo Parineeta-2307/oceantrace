@@ -1,0 +1,34 @@
+{
+  "status": "COMPLETED",
+  "particle_count": 100,
+  "horizons": {
+    "+6h": {
+      "time": "2026-08-01T07:02:11.478573",
+      "latitude": 20.127090454101562,
+      "longitude": 72.73738098144531,
+      "uncertainty_p95_km": 0.8551463816143604,
+      "particle_count": 100
+    },
+    "+12h": {
+      "time": "2026-08-01T13:02:11.478573",
+      "latitude": 20.127626419067383,
+      "longitude": 72.73747253417969,
+      "uncertainty_p95_km": 0.9097631588521911,
+      "particle_count": 100
+    },
+    "+24h": {
+      "time": "2026-08-02T01:02:11.478573",
+      "latitude": 20.129243850708008,
+      "longitude": 72.73757934570312,
+      "uncertainty_p95_km": 1.0846122011711543,
+      "particle_count": 100
+    },
+    "+48h": {
+      "time": "2026-08-03T01:02:11.478573",
+      "latitude": 20.13604164123535,
+      "longitude": 72.73794555664062,
+      "uncertainty_p95_km": 1.972068514110615,
+      "particle_count": 100
+    }
+  }
+}
