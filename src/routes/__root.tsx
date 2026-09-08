@@ -82,7 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       meta: [
         { charSet: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { title: "OceanTrace — Oil Spill Investigation Console" },
+        { title: "OceanTrace" },
         {
           name: "description",
           content:
@@ -109,7 +109,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           href: "https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap",
         },
         { rel: "stylesheet", href: appCss },
-        { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+        { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+        { rel: "apple-touch-icon", href: "/favicon.svg" },
       ],
     }),
     shellComponent: RootShell,
@@ -205,9 +206,7 @@ function AppShell() {
         }`}
       >
         <div className={`flex items-center gap-2 px-3 py-4 ${collapsed ? "justify-center" : ""}`}>
-          <div className="flex size-8 items-center justify-center rounded-md bg-[var(--lime)]">
-            <span className="text-xs font-bold text-white">OT</span>
-          </div>
+          <img src="/favicon.svg" alt="" className="size-8 rounded-md" />
           {!collapsed && (
             <span
               style={{ fontFamily: "var(--font-display)" }}
@@ -240,12 +239,15 @@ function AppShell() {
           />
           <aside className="relative flex h-full w-[220px] flex-col bg-[#0B3A48] shadow-xl">
             <div className="flex items-center justify-between px-4 py-4">
-              <span
-                style={{ fontFamily: "var(--font-display)" }}
-                className="text-[15px] font-semibold tracking-tight text-white"
-              >
-                OceanTrace
-              </span>
+              <div className="flex items-center gap-2">
+                <img src="/favicon.svg" alt="" className="size-8 rounded-md" />
+                <span
+                  style={{ fontFamily: "var(--font-display)" }}
+                  className="text-[15px] font-semibold tracking-tight text-white"
+                >
+                  OceanTrace
+                </span>
+              </div>
               <button
                 className="rounded-md border border-white/20 px-2 py-1 text-xs text-white/80"
                 onClick={() => setNavOpen(false)}
@@ -282,6 +284,7 @@ function AppShell() {
           >
             Menu
           </button>
+          <img src="/favicon.svg" alt="" className="size-7 rounded-md" />
           <span
             style={{ fontFamily: "var(--font-display)" }}
             className="text-[15px] font-semibold text-white"
