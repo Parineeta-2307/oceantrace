@@ -126,6 +126,7 @@ const NAV_ITEMS = [
   { to: "/reconstruction", label: "Reconstruction", icon: "↺" },
   { to: "/forecast", label: "Forecast", icon: "→" },
   { to: "/vessels", label: "Vessels", icon: "▲" },
+  { to: "/watch", label: "Sentinel Watch", icon: "⚠" },
   { to: "/analytics", label: "Analytics", icon: "◧" },
   { to: "/alerts", label: "Alerts", icon: "◈" },
   { to: "/history", label: "History", icon: "◔" },
