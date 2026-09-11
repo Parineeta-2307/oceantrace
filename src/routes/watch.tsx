@@ -19,7 +19,7 @@ export const Route = createFileRoute("/watch")({
 
 function WatchPage() {
   return (
-    <div className="relative flex h-full min-h-0 flex-col">
+    <div className="flex h-full min-h-0 flex-col overflow-y-auto">
       <div className="border-b border-border bg-card px-8 py-5">
         <h1>Sentinel Watch</h1>
         <p className="mt-1 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
@@ -40,11 +40,17 @@ function WatchPage() {
         <StatCard label="Flagged events" value={String(SENTINEL_WATCH_EVENT_COUNT)} />
       </div>
 
-      <div className="relative min-h-0 flex-1">
+      {/*
+        Fixed explicit height instead of flex-1: this map's parent chain
+        wasn't reliably resolving to a real pixel height (it was rendering
+        as a thin strip), so it gets a guaranteed size directly rather than
+        depending on ambient flex layout above it.
+      */}
+      <div className="relative w-full shrink-0" style={{ height: "60vh", minHeight: "480px" }}>
         <WatchMap />
       </div>
 
-      <div className="max-h-[38vh] shrink-0 overflow-y-auto">
+      <div className="shrink-0">
         <WatchRankingTable />
       </div>
     </div>
