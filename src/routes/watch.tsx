@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import WatchMap from "@/components/watch/WatchMap";
 import WatchRankingTable from "@/components/watch/WatchRankingTable";
 import { SENTINEL_WATCH_EVENT_COUNT, SENTINEL_WATCH_WINDOW } from "@/data/sentinelWatch";
 
@@ -39,7 +40,11 @@ function WatchPage() {
         <StatCard label="Flagged events" value={String(SENTINEL_WATCH_EVENT_COUNT)} />
       </div>
 
-      <div className="min-h-0 flex-1 overflow-y-auto">
+      <div className="relative min-h-0 flex-1">
+        <WatchMap />
+      </div>
+
+      <div className="max-h-[38vh] shrink-0 overflow-y-auto">
         <WatchRankingTable />
       </div>
     </div>
